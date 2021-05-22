@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
             team: allMarkdownRemark(
-              filter: { fileAbsolutePath: { regex: "content/team\/.*/" } }
+              filter: { fileAbsolutePath: { regex: "content/master-and-instructors\/.*/" } }
               sort: { fields: [frontmatter___date], order: DESC }
             ) {
               edges {
@@ -93,7 +93,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
         });
         result.data.team.edges.forEach(({ node }) => {
-          const component = path.resolve('src/templates/team.js');
+          const component = path.resolve('src/templates/master-and-instructors.js');
           createPage({
             path: node.frontmatter.path ? node.frontmatter.path : node.fields.slug,
             component,

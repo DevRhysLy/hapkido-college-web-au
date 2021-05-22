@@ -27,18 +27,20 @@ const Services = props => {
         </div>
       </div>
 
-      <div className="container pb-6">
+      <div className="container pb-6">{console.log(services)}
         <div className="row">
           {services.map(edge => (
             <div key={edge.node.id} className="col-12 col-md-4 mb-1">
-              <div className="card service service-teaser">
-                <div className="card-content">
-                  <h2>
-                    <Link to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link>
-                  </h2>
-                  <p>{edge.node.excerpt}</p>
+              <Link to={edge.node.fields.slug}>
+                <div className="card service service-teaser">
+                  <div className="card-content">
+                    <h2>
+                      {edge.node.frontmatter.title}
+                    </h2>
+                    <p>{edge.node.excerpt}</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import Call from '../components/Call';
@@ -11,7 +11,7 @@ const Team = props => {
 
   return (
     <Layout bodyClass="page-teams">
-      <SEO title="Team" />
+      <SEO title="Master and Instructors" />
 
       <div className="intro">
         <div className="container">
@@ -30,45 +30,27 @@ const Team = props => {
 
       <div className="container">
         <div className="row">
-          {team.filter(edge => (edge.node.frontmatter.promoted)).map(({ node }) => (
-            <div key={node.id} className="col-12 col-md-6 mb-2">
+        {team.map(edge => (
+            <div key={edge.node.id} className="col-12 col-md-6 mb-2">
+              <Link to={edge.node.fields.slug}>
               <div className="team team-summary team-summary-large">
-                {node.frontmatter.image && (
+                {edge.node.frontmatter.image && (
                   <div className="team-image">
-                    <img alt={`photo of ${node.frontmatter.title}`} className="img-fluid mb-2" src={node.frontmatter.image} />
+                    <img alt={`photo of ${edge.node.frontmatter.title}`} className="img-fluid mb-2" src={edge.node.frontmatter.image} />
                   </div>
                 )}
                 <div className="team-meta">
-                  <h2 className="team-name">{node.frontmatter.title}</h2>
-                  <p className="team-description">{node.frontmatter.jobtitle}</p>
-                  {node.frontmatter.linkedin && (
+                  <h2 className="team-name">{edge.node.frontmatter.title}</h2>
+                  <p className="team-description">{edge.node.frontmatter.jobtitle}</p>
+                  {edge.node.frontmatter.linkedin && (
                     <a target="_blank" href="{{ .Params.Linkedinurl }}">LinkedIn</a>
                   )}
                 </div>
                 <div className="team-content">
-                  <p>{node.excerpt}</p>
+                  <p>{edge.node.excerpt}</p>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <div className="row pt-6 pb-6">
-          {team.filter(edge => (!edge.node.frontmatter.promoted)).map(({ node }) => (
-            <div key={node.id} className="col-12 col-md-6 mb-2">
-              <div className="team team-summary">
-                {node.frontmatter.image && (
-                  <div className="team-image">
-                    <img alt={`photo of ${node.frontmatter.title}`} className="img-fluid mb-2" src={node.frontmatter.image} />
-                  </div>
-                )}
-                <div className="team-meta">
-                  <h2 className="team-name">{node.frontmatter.title}</h2>
-                  <p className="team-description">{node.frontmatter.jobtitle}</p>
-                  {node.frontmatter.linkedin && (
-                    <a target="_blank" href="{{ .Params.Linkedinurl }}">LinkedIn</a>
-                  )}
-                </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
@@ -81,7 +63,7 @@ const Team = props => {
 export const query = graphql`
   query TeamQuery {
     team: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/team\/.*/" } }
+      filter: { fileAbsolutePath: { regex: "/master-and-instructors\/.*/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -101,7 +83,7 @@ export const query = graphql`
         }
       }
     }
-    intro: markdownRemark(fileAbsolutePath: {regex: "/(team.md)/"}) {
+    intro: markdownRemark(fileAbsolutePath: {regex: "/(master-and-instructors.md)/"}) {
       html
       frontmatter {
         image
