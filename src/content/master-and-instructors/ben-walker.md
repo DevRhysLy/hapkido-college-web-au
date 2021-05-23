@@ -1,9 +1,9 @@
 ---
-title: 'Susan Shelton'
+title: 'Ben Walker'
 date: 2018-12-20T13:45:06+10:00
 draft: false
-image: '/images/team/cristian-newman-94319-unsplash.jpg'
-jobtitle: 'Developer'
+image: "/images/team/placeholder.jpg"
+jobtitle: '3rd Dan Instructor'
 weight: 5
 ---
 
