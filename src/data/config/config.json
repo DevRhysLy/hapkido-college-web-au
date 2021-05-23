@@ -6,21 +6,21 @@
         "mobile": "/images/logo/HCA-Logo.png",
         "desktop": "/images/logo/HCA-Logo.png",
         "desktop_height": "36px",
-        "alt": "Serif - A Gatsby Business Theme"
+        "alt": "hapkido college"
     },
     "homepage_meta_tags": {
-        "meta_description": "Serif is a modern business theme for Gatsby. It contains content types for the archetypical business website. The theme is fully responsive, blazing fast and artfully illustrated.",
-        "meta_og_title": "Gatsby Serif Theme",
+        "meta_description": "Hapkido College of Australia, Martial Arts Training all over Sydney",
+        "meta_og_title": "Hapkido College of Australia",
         "meta_og_type": "website",
-        "meta_og_url": "https://hugo-gatsby.netlify.app",
-        "meta_og_image": "https://www.zerostatic.io/theme/gatsby-serif/gatsby-serif-screenshot.png",
-        "meta_og_description": "Serif is a modern business theme for Gatsby. It contains content types for the archetypical business website. The theme is fully responsive, blazing fast and artfully illustrated.",
+        "meta_og_url": "www.hapkidocollege.com.au",
+        "meta_og_image": "/images/logo/HCA-Logo.png",
+        "meta_og_description": "Hapkido College of Australia, Martial Arts Training all over Sydney",
         "meta_twitter_card": "summary",
-        "meta_twitter_site": "@zerostaticio",
-        "meta_twitter_creator": "@zerostaticio"
+        "meta_twitter_site": "@hapkido_college",
+        "meta_twitter_creator": "@hapkido_college"
     },
     "footer": {
-        "copyright_text": "Free Gatsby theme by",
-        "copyright_link": "https://www.zerostatic.io"
+        "copyright_text": "Hapkido College of Australia",
+        "copyright_link": "www.hapkidocollege.com.au"
     }
 }

@@ -15,7 +15,7 @@ const Call = props => {
     <div className="call">
       <div className="call-box-top">
         <strong>
-          Please feel free to contact us for any enquiries
+          Contact Us
         </strong>
       </div>
       {props.showButton && (

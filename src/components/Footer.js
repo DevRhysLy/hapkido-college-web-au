@@ -26,7 +26,8 @@ const Footer = props => {
         <div className="row">
           <div className="col-12">
             <div className="footer-inner">
-              <h3 className="footer-title">{data.site.siteMetadata.title}</h3>
+              <h3 className="footer-title">Hapkido College of Australia</h3>
+              <div className="column">
               <ul>
                 {data.allFooterMenuJson.edges.map(({ node }) => (
                   <li key={node.name}>
@@ -34,6 +35,7 @@ const Footer = props => {
                   </li>
                 ))}
               </ul>
+              </div>
             </div>
           </div>
         </div>
