@@ -24,19 +24,10 @@ const Home = props => {
 
       <div className="intro">
         <div className="container">
-          <div className="row justify-content-start">
-            <div className="col-12 col-md-7 col-lg-6 order-2 order-md-1">
               <div dangerouslySetInnerHTML={{ __html: intro.html }} />
               <Call showButton />
             </div>
-            {intro.frontmatter.intro_image && (
-              <div className="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                <img alt={intro.frontmatter.title} className={introImageClasses} src={intro.frontmatter.intro_image} />
-              </div>
-            )}
           </div>
-        </div>
-      </div>
 
       {services.length > 0 && (
         <div className="strip">
@@ -64,7 +55,7 @@ const Home = props => {
         </div>
       )}
 
-      {features.length > 0 && (
+      {/* {features.length > 0 && (
         <div className="strip strip-grey">
           <div className="container pt-6 pb-6 pt-md-10 pb-md-10">
             <div className="row justify-content-center">
@@ -84,7 +75,7 @@ const Home = props => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </Layout>
   );
 };
