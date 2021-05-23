@@ -55,7 +55,7 @@ const Home = props => {
         </div>
       )}
 
-      {features.length > 0 && (
+      {/* {features.length > 0 && (
         <div className="strip strip-grey">
           <div className="container pt-6 pb-6 pt-md-10 pb-md-10">
             <div className="row justify-content-center">
@@ -75,7 +75,7 @@ const Home = props => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </Layout>
   );
 };
